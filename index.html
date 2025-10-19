@@ -3,108 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harinath K | Lead Software Engineer</title>
+  <title>Harinath Kuntamukkala | Lead Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1b1b1b1b1b.js" crossorigin="anonymous"></script>
   <style>
     :root {
-      --bg: #f8f9fa;
-      --text: #222;
-      --accent: #0077ff;
-      --card-bg: #fff;
-      --border: #e0e0e0;
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --accent: #2563eb;
     }
-
     body {
-      font-family: "Segoe UI", Roboto, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      background: var(--bg);
+      background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
-
     header {
-      background: var(--card-bg);
-      padding: 3rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 4rem 1rem 2rem;
     }
-
-    h1 {
-      margin: 0.2em 0;
+    header h1 {
       font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #555;
+    header p {
+      font-size: 1.1rem;
+      color: #4b5563;
     }
-
-    section {
-      max-width: 850px;
-      margin: 3rem auto;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    .socials {
+      margin-top: 1rem;
     }
-
-    h3 {
-      border-left: 4px solid var(--accent);
-      padding-left: 0.6rem;
-      margin-top: 0;
+    .socials a {
       color: var(--accent);
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    a {
-      color: var(--accent);
+      margin: 0 0.75rem;
       text-decoration: none;
+      font-weight: 600;
     }
-    a:hover {
-      text-decoration: underline;
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-
+    h2 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      color: #666;
       font-size: 0.9rem;
+      color: #6b7280;
     }
-
-    @media (max-width: 600px) {
-      section {
-        margin: 1rem;
-        padding: 1.5rem;
-      }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Harinath Kuntamukkala</h1>
-    <h2>Lead Software Engineer · Singapore</h2>
-    <p>
-      <a href="https://www.linkedin.com/in/harinathkuntamukkala" target="_blank">LinkedIn</a> · 
+    <p>Lead Software Engineer · Singapore</p>
+    <div class="socials">
+      <a href="https://linkedin.com/in/harinathk" target="_blank">LinkedIn</a> ·
       <a href="https://github.com/harinathk" target="_blank">GitHub</a>
-    </p>
+    </div>
   </header>
 
   <section>
-    <h3>About</h3>
+    <h2>About</h2>
     <p>
-      I’m a passionate Software Engineer with over 15 years of experience in designing, developing, 
-      and deploying large-scale enterprise applications using Java, Spring Boot, and cloud-native architectures. 
+      I’m a passionate Software Engineer with over 15 years of experience in designing, developing, and deploying large-scale enterprise applications using Java, Spring Boot, and cloud-native architectures. 
       I focus on building high-performance backend systems that are scalable, secure, and maintainable.
     </p>
   </section>
 
   <section>
-    <h3>Technical Expertise</h3>
+    <h2>Technical Expertise</h2>
     <ul>
       <li><strong>Languages:</strong> Java, SQL, JavaScript</li>
       <li><strong>Frameworks:</strong> Spring Boot, Spring Cloud, JPA/Hibernate</li>
@@ -114,7 +100,7 @@
   </section>
 
   <section>
-    <h3>Career Highlights</h3>
+    <h2>Career Highlights</h2>
     <ul>
       <li>Architected and deployed microservices powering mission-critical enterprise systems.</li>
       <li>Led modernization of legacy systems to cloud-native, containerized platforms.</li>
@@ -124,18 +110,15 @@
   </section>
 
   <section>
-    <h3>Education</h3>
-    <p>
-      <strong>M.Sc. (Information Systems)</strong><br/>
-      Focus: Enterprise Software Development
-    </p>
+    <h2>Education</h2>
+    <p><strong>M.Sc. (Information Systems)</strong><br>Focus: Enterprise Software Development</p>
   </section>
 
   <section>
-    <h3>Get in Touch</h3>
+    <h2>Get in Touch</h2>
     <p>
-      I’m always open to collaborating on innovative projects, mentoring engineers, 
-      or exploring new opportunities. Reach out via <a href="mailto:harinathk@gmail.com">email</a>.
+      I’m always open to collaborating on innovative projects, mentoring engineers, or exploring new opportunities.<br>
+      <a href="mailto:harinathk7@gmail.com" style="color: var(--accent); font-weight: 600;">Email me</a>
     </p>
   </section>
 
