@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harinath Kuntamukkala | Lead Software Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/1b1b1b1b1b.js" crossorigin="anonymous"></script>
   <style>
     :root {
       --bg: #f9fafb;
       --text: #1f2937;
       --accent: #2563eb;
+      --secondary-text: #4b5563;
     }
     body {
       font-family: 'Inter', sans-serif;
@@ -24,12 +24,14 @@
       padding: 4rem 1rem 2rem;
     }
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem; /* Slightly larger title */
       margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1.1rem;
-      color: #4b5563;
+      font-size: 1.2rem; /* Slightly larger subtitle */
+      color: var(--secondary-text);
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
     .socials {
       margin-top: 1rem;
@@ -39,6 +41,10 @@
       margin: 0 0.75rem;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.2s;
+    }
+    .socials a:hover {
+      color: #1d4ed8;
     }
     section {
       max-width: 800px;
@@ -46,11 +52,14 @@
       background: white;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Stronger shadow */
     }
     h2 {
       color: var(--accent);
-      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
     }
     ul {
       list-style: none;
@@ -58,6 +67,48 @@
     }
     li {
       margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    li::before {
+      content: '•'; /* Simple bullet point */
+      color: var(--accent);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill-category {
+      flex: 1 1 45%; /* Two columns layout */
+    }
+    .skill-category strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .skill-category span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--secondary-text);
+    }
+    .cert-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-weight: 600;
+    }
+    .cert-list li::before {
+        content: '✓';
+    }
+    @media (max-width: 600px) {
+        .skills-grid {
+            flex-direction: column;
+        }
     }
     footer {
       text-align: center;
@@ -74,56 +125,65 @@
 <body>
   <header>
     <h1>Harinath Kuntamukkala</h1>
-    <p>Lead Software Engineer · Singapore</p>
+    <p>Lead Software Engineer & Cloud Solutions Architect</p>
     <div class="socials">
       <a href="https://www.linkedin.com/in/harinathkuntamukkala/" target="_blank">LinkedIn</a> ·
-      <a href="https://github.com/harinathk" target="_blank">GitHub</a>
+      <a href="https://github.com/harinathk" target="_blank">GitHub</a> ·
+      <a href="mailto:harinathk7@gmail.com">Email</a>
     </div>
   </header>
 
   <section>
-    <h2>About</h2>
+    <h2>Professional Profile</h2>
     <p>
-      I’m a passionate Software Engineer with over 15 years of experience in designing, developing, and deploying large-scale enterprise applications using Java, Spring Boot, and cloud-native architectures. 
-      I focus on building high-performance backend systems that are scalable, secure, and maintainable.
+      An accomplished Lead Software Engineer with years of experience in architecting, building, and delivering mission-critical enterprise Java applications. Expert in designing and deploying highly scalable, cloud-native microservices using the Spring ecosystem and Kubernetes. I champion modern DevOps practices, foster engineering excellence, and deliver end-to-end capabilities across the stack — with a strong focus on resilient backend systems, event-driven architectures (such as Kafka), and cloud scalability.
     </p>
   </section>
 
   <section>
-    <h2>Technical Expertise</h2>
-    <ul>
-      <li><strong>Languages:</strong> Java, SQL, JavaScript</li>
-      <li><strong>Frameworks:</strong> Spring Boot, Spring Cloud, JPA/Hibernate</li>
-      <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes, AWS, Jenkins</li>
-      <li><strong>Architecture:</strong> Microservices, REST APIs, Event-driven systems</li>
-    </ul>
+    <h2>Main Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <strong>Backend & Frameworks</strong>
+        <span>Java, Spring Boot, RESTful APIs, Spring Data JPA</span>
+      </div>
+      <div class="skill-category">
+        <strong>DevOps & Cloud</strong>
+        <span>Kubernetes, Docker, Jenkins CI/CD, AWS</span>
+      </div>
+      <div class="skill-category">
+        <strong>Architecture</strong>
+        <span>Microservices, Event-Driven (Kafka), System Integration, Solution Design</span>
+      </div>
+      <div class="skill-category">
+        <strong>Frontend & Data</strong>
+        <span>Angular, React, JavaScript, Oracle, Cassandra, Hibernate</span>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>Career Highlights</h2>
-    <ul>
-      <li>Architected and deployed microservices powering mission-critical enterprise systems.</li>
-      <li>Led modernization of legacy systems to cloud-native, containerized platforms.</li>
-      <li>Delivered scalable and resilient backend services for high-availability environments.</li>
-      <li>Mentored developers and drove engineering best practices across teams.</li>
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>AWS Certified Solution Architect - Associate</li>
+      <li>Certified Kubernetes Application Developer (CKAD)</li>
+      <li>Prompt Engineering - Vanderbilt University</li>
     </ul>
   </section>
+
 
   <section>
     <h2>Education</h2>
-    <p><strong>M.Sc. (Information Systems)</strong><br>Focus: Enterprise Software Development</p>
-  </section>
-
-  <section>
-    <h2>Get in Touch</h2>
     <p>
-      I’m always open to collaborating on innovative projects, mentoring engineers, or exploring new opportunities.<br>
-      <a href="mailto:harinathk7@gmail.com" style="color: var(--accent); font-weight: 600;">Email me</a>
+        <strong>Master of Science in Information Systems</strong>
+    </p>
+    <p>
+        <strong>Bachelor of Computer Applications</strong>
     </p>
   </section>
 
   <footer>
-    © 2025 Harinath Kuntamukkala · Built with ❤️ using GitHub Pages
+    © 2025 Harinath Kuntamukkala | Built for collaboration and continuous learning.
   </footer>
 </body>
 </html>
